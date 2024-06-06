@@ -18,7 +18,7 @@
     <li th:each="news, status : ${newslist}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
       <a th:href="@{/news/{aid}(aid=${news.aid})}" class="text-decoration-none">
         [[${status.count}]] [[${news.title}]], [[${news.date}]]</a>
-      <a th:href="@{/news/{aid}/delete(aid=${news.aid})}"><span class="badge bg-secondary"> &times; </span></a>
+      <a th:href="@{/news/delete/{aid}(aid=${news.aid})}"><span class="badge bg-secondary"> &times; </span></a>
     </li>
   </ul>
   <hr>
